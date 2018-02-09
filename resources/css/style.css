@@ -19,17 +19,22 @@ body, html {
 }
 h1 {margin: 2rem 0rem; font-family: 'Italianno', 'cursive', serif; font-style: italic; color: #555; font-weight: 600; font-size: 2.5rem;}
 h3 {color: #b22222; font-size: 1.5rem; padding: 1rem 0rem; font-weight:600;}
-p {font-family:'Lato', sans-serif;font-size: 1.25rem; padding-bottom: 1rem; font-weight: 300; line-height: 1.4}
+p {font-family:'Lato', sans-serif;font-size: 1.25rem; padding-bottom: 1rem; font-weight: 100; line-height: 1.4}
 /* header & nav section */
 .logo {font-size: 1.425rem; color:#999;}
 .name {color:#b22222 ; font-weight: bolder;}
 .nav a {text-decoration: none; color: #888; padding: 0rem 0.5rem;}
 /* banner section font */
 .learn {font-size: 3rem; font-weight: 700; margin: 1rem; color:#555;}
-.what{font-size: 1.5rem; margin: 1rem; color:#777; line-height: 1.2;}
+.what{font-weight: 400; font-size: 1.425rem; margin: 1rem; color:#888; line-height: 1.2;}
 /* info section */
 .info h3 {padding-top: 0;}
+/* 2nd gray/gallery section */
+.courses-info h3 {margin: 0.5rem 0rem 0rem 2rem}
+.course {font-family: 'Lato', sans-serif; display: block; margin: 0.75rem 0rem 1rem 2rem; font-size: 1.25rem;}
+.courses-info p {color: #999; font-family: 'Lato', sans-serif; font-size: 1rem; padding: 0rem 0rem 0rem 2rem; line-height: 1.4; font-weight: 200;}
 /* white sections  */
+.description p {color: #888}
 .description span {display: block; font-family: 'Italianno', cursive; font-size: .875rem; font-weight: 100; margin-top: 0.75rem; color:#999}
 /* bottom & footer section font */
 h1.headline {font-family: 'Italianno', 'cursive', serif; text-align: center; font-style: italic;}
@@ -49,7 +54,7 @@ button {
   margin: 1rem;
 }
 button a {text-decoration: none; color: white;transition: all 250ms linear 0ms;}
-button:hover a{text-decoration: none; color:#b2b2b2;}
+button:hover a{text-decoration: none; color:#b2b2b2}
 button:active a{color:white;}
 
 .info a:hover, .nav a:hover {
@@ -63,14 +68,13 @@ button:active a{color:white;}
   background-color: #d8d8d8;
   transition: background-color 450ms ease-in-out 0ms;
 }
-img {
-  border-radius: 4px;
-}
+img {border-radius: 4px;}
+.picture img {border-radius: 4px 4px 0px 0px;}
 /*1st white section links */
 .info a {color:#999999; text-decoration: none;}
 
 /* 2nd white section video */
-video{}
+video{border-radius: 4px;}
 
 /* header section */
 header {
@@ -201,6 +205,9 @@ display: block;
   max-width: 31%;
   overflow: hidden;
   margin-bottom: 2rem;
+  background-color: #fff;
+  padding-bottom: 1.75rem;
+  border-radius: 4px;
 }
 .picture img {
   max-width: 100%;
