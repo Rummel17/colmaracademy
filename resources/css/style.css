@@ -3,11 +3,6 @@ body, html {
   font-family: 'Open Sans', sans-serif; ;
   color: #777777;
 }
-body {
-  width: 100%;
-  display:flex;
-  flex-direction: column;
-}
 
 /* fonts, Buttons, Videos & Links etc. */
 @font-face {
