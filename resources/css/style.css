@@ -3,7 +3,12 @@ body, html {
   font-family: 'Open Sans', sans-serif; ;
   color: #777777;
 }
-
+.main-container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
 /* fonts, Buttons, Videos & Links etc. */
 @font-face {
   font-family: 'Open Sans', sans-serif;
@@ -41,7 +46,7 @@ h1.headline {font-family: 'Italianno', 'cursive', serif; text-align: center; fon
 footer {font-size: 0.75rem;}
 /* banner section button & links */
 button {
-  max-width: 400px;
+  max-width: 70%;
   border: #777777 solid 1px;
   font-size: 1.25rem;
   padding: 1rem;
@@ -78,10 +83,12 @@ video{border-radius: 4px;}
 
 /* header section */
 header {
-  max-width: 100%;
+  width: 100%;
+  margin-right: 0 auto;
   display:flex;
   justify-content: space-between;
   height: 4rem;
+  background-color: pink;
 }
 .logo, .nav {
   display: flex;
@@ -118,6 +125,7 @@ header {
 .gray-two {
   padding-bottom: 1rem;
 }
+
 
 /*1st gray/banner section */
 .content {
