@@ -52,16 +52,13 @@ button a {text-decoration: none; color: white;transition: all 250ms linear 0ms;}
 button:hover a{text-decoration: none; color:#b2b2b2;}
 button:active a{color:white;}
 
-a:hover {
+.info a:hover, .nav a:hover {
   color: #454545;
   border-bottom: #b22222 solid 2px;
   transition: color 250ms linear 0ms;
   transition: border 100ms linear 0ms;
 }
-.info a:hover {
-  color:#454545;
-  transition: color 250ms linear 0ms;
-}
+
 .teaser.orientation:hover,.teaser.campus:hover, .teaser.guest:hover, .teaser.fisma:hover, .teaser.now-and-then:hover  {
   background-color: #d8d8d8;
   transition: background-color 450ms ease-in-out 0ms;
