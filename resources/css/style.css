@@ -3,6 +3,11 @@ body, html {
   font-family: 'Open Sans', sans-serif; ;
   color: #777777;
 }
+body {
+  width: 100%;
+  display:flex;
+  flex-direction: column;
+}
 
 /* fonts, Buttons, Videos & Links etc. */
 @font-face {
@@ -30,9 +35,9 @@ p {font-family:'Lato', sans-serif;font-size: 1.25rem; padding-bottom: 1rem; font
 /* info section */
 .info h3 {padding-top: 0;}
 /* 2nd gray/gallery section */
-.courses-info h3 {margin: 0.5rem 0rem 0rem 2rem}
-.course {font-family: 'Lato', sans-serif; display: block; margin: 0.75rem 0rem 1rem 2rem; font-size: 1.25rem;}
-.courses-info p {color: #999; font-family: 'Lato', sans-serif; font-size: 1rem; padding: 0rem 0rem 0rem 2rem; line-height: 1.4; font-weight: 200;}
+.courses-info h3 {margin: 0.5rem 0rem 0rem 2rem; font-weight: 600; font-size: 1.5rem}
+.course {font-family: 'Lato', sans-serif; display: block; margin: 0.5rem 0rem 1rem 2rem; font-size: 1.325rem;}
+.courses-info p {color: #999; font-family: 'Lato', sans-serif; font-size: 1rem; padding: 0rem 0rem 0rem 2rem; line-height: 1.4; font-weight: 200; letter-spacing: 0.25px}
 /* white sections  */
 .description p {color: #888}
 .description span {display: block; font-family: 'Italianno', cursive; font-size: .875rem; font-weight: 100; margin-top: 0.75rem; color:#999}
@@ -41,7 +46,7 @@ h1.headline {font-family: 'Italianno', 'cursive', serif; text-align: center; fon
 footer {font-size: 0.75rem;}
 /* banner section button & links */
 button {
-  width: 400px;
+  max-width: 400px;
   border: #777777 solid 1px;
   font-size: 1.25rem;
   padding: 1rem;
