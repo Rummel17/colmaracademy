@@ -1,4 +1,3 @@
-
 body, html {
   font-size: 16px ;
   font-family: 'Open Sans', sans-serif; ;
@@ -18,27 +17,29 @@ body, html {
   font-family:'Italianno', 'cursive', serif;
   src: url(Italianno-Regular.tff) format('truetype');
 }
-h1 {margin: 2rem 0rem; font-family: 'Italianno', 'cursive', serif; font-style: italic; color: #555; font-weight: 600; font-size: 2.5rem;}
-h3 {color: #b22222; font-size: 1.5rem; padding: 1rem 0rem; font-weight:600;}
-p {font-family:'Lato', sans-serif;font-size: 1.25rem; padding-bottom: 1rem; font-weight: 100; line-height: 1.4}
+h1 {padding: 2rem 0rem; font-size: 2.5rem; font-weight: 600; font-family: 'Italianno', 'cursive', serif; font-style: italic; color: #555;}
+h3 {padding: 1rem 0rem; font-size: 1.5rem; font-weight:600; color: #b22222;}
+p {padding-bottom: 1rem; font-size: 1.25rem;  font-weight: 100; line-height: 1.4; font-family:'Lato', sans-serif;}
 /* header & nav section */
 .logo {font-size: 1.425rem; color:#999;}
 .name {color:#b22222 ; font-weight: bolder;}
-.nav a {text-decoration: none; color: #888; padding: 0rem 0.5rem;}
+.nav a {padding:0rem 0.5rem; text-decoration: none; color: #888;}
 /* banner section font */
-.learn {font-size: 3rem; font-weight: 700; color:#555;}
-.text{font-size: 1.425rem; font-weight: 400; color:#888; line-height: 1.2;}
+.banner h1{font-size: 3rem; font-weight: 700; color:#555;}
+.banner h3{ padding: 0rem 0rem 2.5rem 0rem; font-size: 1.425rem; font-weight: 400; color:#888; line-height: 1.2;}
 /* info section */
-.info h3 {padding-top: 0;}
+.info h3 {padding: 0;}
+.info p {padding: 1rem 0rem .75rem 0rem; ; font-weight: 400;line-height: 1.4; color:#777; font-family:'Lato', sans-serif;}
+.info span a {font-size: 0.875rem; color:#999;}
 /* 2nd gray/gallery section */
-.courses-info h3 {margin: 0.5rem 0rem 0rem 2rem; font-weight: 600; font-size: 1.5rem}
-.course {font-family: 'Lato', sans-serif; display: block; margin: 0.5rem 0rem 1rem 2rem; font-size: 1.325rem;}
-.courses-info p {color: #999; font-family: 'Lato', sans-serif; font-size: 1rem; padding: 0rem 0rem 0rem 2rem; line-height: 1.4; font-weight: 200; letter-spacing: 0.25px}
+.courses-info h3 {padding: 1rem 0rem 0.75rem 1.5rem; font-size: 1.5rem; font-weight: 600;}
+.courses-info span {padding: 0.5rem 0rem 0.75rem 1.5rem; font-size: 1.325rem; font-family: 'Lato', sans-serif; display: block; color:#777}
+.courses-info p {padding: 0rem 0rem 0rem 1.5rem; font-size: .875rem; font-weight: 200; color: #999;  line-height: 1.45; letter-spacing: 0.25px}
 /* white sections  */
 .description p {color: #888}
 .description span {display: block; font-family: 'Italianno', cursive; font-size: .875rem; font-weight: 100; margin-top: 0.75rem; color:#999}
 /* bottom & footer section font */
-h1.headline {margin: 0rem 0rem 3rem 0rem; font-family: 'Italianno', 'cursive', serif; text-align: center; font-style: italic;}
+h1.headline {padding: 0rem 0rem 2rem 0rem; font-family: 'Italianno', 'cursive', serif; text-align: center; font-style: italic;}
 footer {font-size: 0.75rem;}
 /* banner section button & links */
 button {
@@ -116,6 +117,7 @@ header {
 .two {
   display: flex;
   flex-direction: column;
+  padding-top: 2rem;
 }
 .container {
   display: flex;
@@ -123,7 +125,7 @@ header {
 
 /*1st gray/banner section */
 .asset {
-  max-width: 60%;
+  width: 60%;
   margin:0rem 3rem 0 3rem;
   display: flex;
   flex-direction: column;
@@ -138,7 +140,6 @@ header {
   flex-direction: column;
   justify-content: flex-start;
   border-left: #f0f0f0 solid 1px;
-  background-color: yellow;
 }
 
 .banner{
@@ -148,13 +149,13 @@ header {
   justify-content: center;
 }
 
-.image{
+.image, video{
   max-width: 100%;
   display: flex;
   flex-direction: column;
 }
 
-.image img {
+.image img, video {
 width: 100%;
 height: auto;
 display: block;
@@ -166,13 +167,14 @@ display: block;
 
 /*1st white/information section  */
 .teaser {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   display: flex;
   padding: 0rem 0rem 2rem 2rem;
 }
 .teaser.orientation, .teaser.fisma {
   padding-top: 2rem;
+
 }
 .teaser.guest, .teaser.campus, .teaser.now-and-then {
   padding-top: 2rem;
@@ -194,6 +196,7 @@ display: block;
   height: auto;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   padding-left: 1rem;
 }
 
@@ -240,4 +243,3 @@ footer{
   margin: 0;
   padding: 0;
   padding: 0rem 0.25rem;
-}
