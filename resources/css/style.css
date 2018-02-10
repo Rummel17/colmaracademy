@@ -27,7 +27,7 @@ p {font-family:'Lato', sans-serif;font-size: 1.25rem; padding-bottom: 1rem; font
 .nav a {text-decoration: none; color: #888; padding: 0rem 0.5rem;}
 /* banner section font */
 .learn {font-size: 3rem; font-weight: 700; color:#555;}
-.what{font-size: 1.425rem; font-weight: 400; color:#888; line-height: 1.2;}
+.text{font-size: 1.425rem; font-weight: 400; color:#888; line-height: 1.2;}
 /* info section */
 .info h3 {padding-top: 0;}
 /* 2nd gray/gallery section */
@@ -117,12 +117,12 @@ header {
   display: flex;
   flex-direction: column;
 }
-.adjust {
+.container {
   display: flex;
 }
 
 /*1st gray/banner section */
-.column {
+.asset {
   max-width: 60%;
   margin:0rem 3rem 0 3rem;
   display: flex;
@@ -138,6 +138,7 @@ header {
   flex-direction: column;
   justify-content: flex-start;
   border-left: #f0f0f0 solid 1px;
+  background-color: yellow;
 }
 
 .banner{
@@ -147,13 +148,13 @@ header {
   justify-content: center;
 }
 
-.image.container{
+.image{
   max-width: 100%;
   display: flex;
   flex-direction: column;
 }
 
-.image.container img {
+.image img {
 width: 100%;
 height: auto;
 display: block;
