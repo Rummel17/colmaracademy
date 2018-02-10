@@ -89,13 +89,13 @@ header {
   align-items: center;
 }
 .logo {
-  margin-left: 1.5rem;
+  margin-left: 3rem;
 }
 .logo img {
   padding: 1.25rem 0.625rem 1rem 0rem;
 }
 .nav{
-  margin-right: 1.5rem;
+  margin-right: 3rem;
 }
 
 /* basic code for the two gray/two white sections*/
@@ -121,7 +121,7 @@ header {
 
 /*1st gray/banner section */
 .content {
-  max-width: 40%;
+  width: 40%;
   height: auto;
   margin-right: 1.5rem;
 }
@@ -134,8 +134,8 @@ header {
 }
 
 .column {
-  max-width: 60%;
-  margin:0rem 3rem 0 1.5rem;
+  width: 60%;
+  margin:0rem 3rem 0 3rem;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -244,7 +244,7 @@ footer{
   justify-content: space-between;
 }
 .copyright {
-  margin-left: 1.5rem;
+  margin-left: 3rem;
 }
 .nav.footer {
   align-items: flex-start;
