@@ -1,12 +1,12 @@
 body, html {
   font-size: 16px ;
   font-family: 'Open Sans', sans-serif; ;
-  color: #777777;
+  color: #777;
 }
 
 #main-container{
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column;
   width: 100%;
 }
 
@@ -23,44 +23,95 @@ body, html {
   font-family:'Italianno', 'cursive', serif;
   src: url(Italianno-Regular.tff) format('truetype');
 }
-/* h1/h2 most important italic/serif, h3 red
- eye catcher important events etc.  */
-h1, h2
-   {padding: 2rem 0rem 2rem 0rem; font-size: 2.5rem; font-weight: 600; color: #555; font-family: 'Italianno', 'cursive', serif; font-style: italic;}
-h2 {padding: 1rem 0rem 0rem 0rem;                                                   text-align: center;}
-h3 {padding: 0rem 0rem 1.5rem 0rem; font-size: 1.5rem; font-weight:600; color: #b22222;}
-h4 {padding: 1rem 0rem 1rem 0rem; font-size: 1rem; font-weight: 300; color:#777; line-height: 1.5; font-family:'Lato', sans-serif;}
-p  {padding: 0rem 0rem 0rem 1rem; font-size: 1.25rem;font-weight: 100; color: #888; line-height: 1.5; font-family:'Lato', sans-serif;}
+/* h1/h2: italic/serif looks educated,
+h3 red: eye catcher important events etc.  */
+h1, h2{
+  padding: 0rem 0rem 2rem 0rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #555;
+  font-family: 'Italianno', 'cursive', serif;
+  font-style: italic;
+}
+h2 {
+  padding: 1rem 0rem 0rem 0rem;
+  display: block;
+  background-color: blue;
+  text-align: center;
+}
+h3 {
+  padding: 0rem 0rem 1.5rem 0rem;
+  font-size: 1.5rem;
+  font-weight:600;
+  color: #b22222;
+}
+h4 {
+  padding: 1rem 0rem 1rem 0rem;
+  font-size: 1rem;
+  font-weight: 300;
+  color:#555;
+  line-height: 1.5;
+  font-family:'Lato', sans-serif;
+}
+p  {
+  padding: 0rem;
+  font-size: 1.25rem;
+  font-weight: 100;
+  color: #888; line-height: 1.5;
+  font-family:'Lato', sans-serif;
+}
+
 @media all and (max-width: 470px) {
   h2 {font-size: 2.25rem}
 }
 
 /* header section */
 header {
-  max-width: 100%;
+  width: 100%;
   display:flex;
   justify-content: space-between;
   height: 4rem;
+  color:#999;
 }
 
-.logo, header {display: flex; align-items: center;}
-/* logo has different padding on purpose to adjust to rest of content*/
-.logo {padding-left: 2.25rem;font-size: 1.425rem;color:#999;}
-.nav  {margin-right: 3rem;}
-.name {color:#b22222 ; font-weight: bolder;}
-.nav a{padding-right: 0.75rem; text-decoration: none; color: #888;}
-.logo img {padding: 1.25rem 0.5rem 1rem 0rem; width: 2.5rem}
-.icons {display:none;}
+.logo, .nav {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  padding-left: 2.25rem;/* different: to adjust with rest*/
+  font-size: 1.425rem;
+}
+.logo__picture{
+  padding: 1.25rem 0.5rem 1rem 0rem;
+  width: 2.5rem
+}
+.logo--red {
+  color: #b22222;
+  font-weight: bolder;
+}
+.nav  {
+  margin-right: 2.5rem;
+}
+.nav__link, .nav-footer__link{
+  text-decoration: none;
+  color: #777;
+}
+.nav--padding, .nav-footer--padding{
+  padding: 0rem;
+  margin: 0rem 0.75rem;
+}
+.nav__link:hover, .nav-footer__link:hover{
+  color: #454545;
+  border-bottom: #b22222 solid 2px;
+  transition: color 250ms ease-in-out 100ms;
+  transition: border 200ms linear 0ms;
+}
+
+.icons--hide {display:none;}
 
 @media all and (max-width: 470px){
-
-.nav.header,.logo {display: none;}
-.icons img {max-width: 100%; height: auto; padding: 1rem 1rem}
-.icons img:hover{
-  background-color: #d9d9d9;
-  transition: background-color 450ms ease-in-out 50ms;
-  border-radius: 2px;
-}
+.nav--hide,.logo {display: none;}
 
 .icons {
     display: flex;
@@ -68,118 +119,157 @@ header {
     width: 100%;
     margin: 0rem 2rem;
   }
+.icon__svg {
+  max-width: 100%;
+  height: auto;
+  padding: 1rem 1rem
+}
+.icon__svg:hover{
+  background-color: #d9d9d9;
+  transition: background-color 450ms ease-in-out 50ms;
+}
 }
 
-/* basic code for the two gray/two white sections*/
+/* main and 1st gray/banner section */
 .section {
   width: 100%;
   height: auto;
   display: flex;
 }
-.gray {background-color: #d8d8d8;}
-.white {background-color: #ffffff;}
-.second {padding: 2rem 0rem 2rem 0rem; display: flex;flex-direction: column;}
-
-.asset {
-  width: 60%;
-  margin: 3rem 0rem 3rem 3rem;
+.section--gray {background-color: #d8d8d8;}
+.section--white {background-color: #ffffff;}
+.section--column {
+  padding: 2rem 0rem 2rem 0rem;
   display: flex;
   flex-direction: column;
 }
+.section__container{display: flex;}
 
-.content {
-  width: 40%;
-  border-left: #f0f0f0 solid 1px;
-  margin: 3rem;
+.col, .col-s {
+  width: 60%;
+  margin: 3rem 0rem 3rem 3rem;
+  height: auto;
   display: flex;
   flex-flow: column;
 }
-
-.border {border:none;}
-.container {display: flex;}
-
-@media all and (max-width: 470px){
-  .section {
-    flex-flow: column;
-  }
-  .asset {
-    width: 100%;
-    margin: 0;
-
-    justify-content: center;
-  }
-  .content {
-    width:100%;
-    margin: 0;
-    background-color: #d8d8d8;
-    border: none;
-  }
-  .container {
-    flex-flow: column;
-  }
-
-  .hide {
-    display: none;
-  }
+.col-s {
+  width: 40%;
+  padding-right: 3rem;
 }
 
-/*1st gray (banner) section */
-.learn-something h1{font-size: 3rem; font-weight: 700; color:#555;}
-.learn-something h3 {font-size: 1.425rem; font-weight: 400; color:#888; line-height: 1.3;}
-
-.learn-something {
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
+/*all assets on site */
+.col__pic-container,
+.col__video-container,
+.col-s__pic-container,
+.courses__pic-container{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  border-radius: 4px;
 }
+.col__pic-container img,
+.col__video source,
+.col-s__pic-desktop,
+.col-s__pic-mobile,
+.courses__pic-container img {
+max-width:100%;
+height: auto;
+display: block;}
 
-/* image 1st gray/white and white 2nd sections/video 2nd white section*/
-.image, video{width: 100%; height: auto; overflow:hidden;}
-.image img, video {max-width: 100%; height: auto; display: block;}
-img, video {border-radius: 4px;}
-/* banner section button */
-button {
-  max-width: 400px;
-  border: #777777 solid 1px;
-  font-size: 1.25rem;
-  padding: 1rem;
-  margin-bottom: 2rem;
-  display: inline;
+.col--center-content {justify-content: center;}
+.col-s__banner {margin: 0rem 0rem 2rem 0rem;}
+
+.col-s__banner h1{
+  font-size: 3rem;
+  font-weight: 700;
+  color:#555;
+}
+.col-s__banner h3 {
+  font-size: 1.425rem;
+  font-weight: 400;
+  color:#888;
+  line-height: 1.3;
+}
+.col-s__banner button{
   background-color: #4a4a4a; /* #9b9b9b wireframe*/
+  font-size: 1.25rem;
+  width: 60%;
+  padding: 1rem 0rem;
+  display: inline;
   text-align: center;
   font-weight: 300;
   border-radius: 0.25rem;
   cursor: pointer;
+  border: black solid 1px;
 }
-button a {text-decoration: none; color: white;transition: all 250ms linear 0ms;}
-button:hover a{text-decoration: none; color:#b2b2b2}
-button:active a{color:white;}
+.col-s-btn__link {
+  text-decoration: none;
+  color: white;
+  padding: 0rem 1rem;
+  transition: all 250ms linear 0ms;
+}
+.col-s-btn__link:hover {
+  text-decoration: none;
+  color:#b2b2b2;
+}
+.col-s-btn__link:active {
+  text-decoration: none;
+}
 
 @media all and (max-width: 470px){
-  .learn-something {padding: 0rem 2rem;}
-  .learn-something h1{font-size: 2.25rem; font-weight: 700; color:#555;}
-  .learn-something h3 {font-size: 1.25rem; font-weight: 400; color:#888; line-height: 1.3;}
+  .col__pic-container,
+  .col__video-container,
+  .col-s__pic-container,
+  .courses__pic-container{border-radius: 0px;}
+  .section {flex-flow: column;}
+
+  .col, .col-s {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+  }
+.col-s__banner {margin: 2rem 1rem;}
+.col-s__banner button{width: 100%;}
+
+.col-s__banner h1{font-size: 2.5rem;}
+.col-s__banner h3 {font-size: 1.25rem;}
+}
 }
 
 /*1st white/information section  */
-.info h3 {padding: 0;}
-.info span a {font-size: 0.875rem; color:#4185de;}
-.description span {padding-top: 0.75rem;font-size: .875rem; font-weight: 100; display: block; font-family: 'Italianno', cursive;  color:#999}
+.col__text {padding-top:2rem;}
 
-.events, .thesis {
+.col__name {
+  padding: 1rem 0rem;
+  font-size: .875rem;
+  font-weight: 100;
+  display: block;
+  font-family: 'Italianno', cursive;
+  color:#999
+}
+
+.col--border {border-left: #f0f0f0 solid 1px;}
+
+.col-s__container {
   width: calc(100%-2rem);
   height: auto;
   display: flex;
   padding: 2rem 0rem 2rem 2rem;
 }
 
-.events:hover, .thesis:hover{
+.col-s__container:hover {
   background-color: #e5e5e5;
   transition: background-color 450ms ease-in-out 0ms;
 }
+.col-s__pic-container {
+  width: 35%;
+  height: auto;
+  overflow: hidden;
+}
+.col-s__pic-mobile {display: none;}
 
-.info {
+.col-s__text {
   width: 65%;
   height: auto;
   display: flex;
@@ -188,32 +278,42 @@ button:active a{color:white;}
   padding-left: 1rem;
 }
 
-.pic-container {
-  display: flex;
-  height: auto;
-  margin: 0;
-  padding: 0;
-}
-.pic {
-  width: 35%; height: auto; overflow: hidden;
-}
+.col-s__text h3 {padding: 0;}
+.col-s__text a {
+  font-size: 0.875rem;
+  color:#24AAFE;
+  text-decoration: none;
+  }
 
-.info a:hover, .nav a:hover {
-  color: #454545;
-  border-bottom: #b22222 solid 2px;
-  transition: color 250ms linear 0ms;
-  transition: border 100ms linear 0ms;
-}
-.info a {color:#999999; text-decoration: none;}
-.pic{}
-.pic img {max-width: 100%; height: auto; display: block;}
-.pic img.mobile {display: none;}
+  .col-s__text a:hover {
+    color: #888;
+    border-bottom: #b22222 solid 2px;
+    transition: color 250ms ease-in-out 0ms;
+    transition: border 150ms linear 0ms;
+  }
 
 @media all and (max-width: 470px) {
-  .info h3 {padding: 2rem 0rem 0rem 0rem; font-size: 1.75rem; color: #666;}
-  .info h4 {font-size: 1.375rem;}
-  .info span a {font-size: 1rem;}
-  .info {width:100%;}
+.col__pic-container--hide, .col-s__pic-desktop{display: none;}
+.col-s__pic-container, .col-s__text {width: 100%;}
+.col-s__pic-mobile {display: block;}
+.col--border {border:none}
+
+.col-s__container:hover {
+  background-color: #fff;
+  transition: background-color 450ms ease-in-out 0ms;
+}
+/*wireframe says 64px between each pic but looks weired, used half */
+.col-s__container--margin-bottom {margin-bottom:1rem;}
+.col-s__pic-container {margin-bottom: 2rem;}
+.col-s__container {
+  width: calc(100% -2rem);
+  flex-flow: column;
+  padding: 1rem 1rem;
+}
+.col-s__text {
+}
+
+
 /* display none messed up the pictures */
   .events:hover{
       background-color: white;
@@ -243,8 +343,7 @@ button:active a{color:white;}
 .courses-mobile {
   display: none;
 }
-
-.picture-container {
+.courses__container {
   width: 30%;
   flex-grow: 1;
   background-color: #fff;
@@ -252,15 +351,30 @@ button:active a{color:white;}
   padding-bottom: 1rem;
   border-radius: 4px;
 }
-.picture {
+.courses__pic-container{
   width: 100%;
   height: auto;
   overflow: hidden;
 }
-.course-info h3 {padding: 1rem 0rem 0.75rem 1.5rem;}
-.course-info span {padding: 0.5rem 0rem 0.75rem 1.5rem; font-size: 1.325rem; font-family: 'Lato', sans-serif; display: block; color:#777}
-.course-info p {padding: 0rem 0rem 0rem 1.5rem; font-size: .875rem; font-weight: 200; color: #999; line-height: 1.45; letter-spacing: 0.25px}
-.picture img {max-width: 100%; height: auto; display: block;border-radius: 4px 4px 0px 0px;}
+.course__info {
+  padding: 1rem 0rem 0.5rem 1.5rem;
+}
+.course__info h3 {padding: 0;}
+.course__info span {
+  padding: 1.125rem 0rem 0.5rem 0rem;
+  font-size: 1.325rem;
+  font-family: 'Lato', sans-serif;
+  display: block;
+  color:#777
+}
+.course__info p {
+  font-size: .875rem;
+  font-weight: 200;
+  color: #999;
+  line-height: 1.45;
+  letter-spacing: 0.25px
+}
+.courses__pic-container{border-radius: 4px 4px 0px 0px;}
 /* two pics in the center*/
 .center {margin-left:2rem; margin-right: 2rem;}
 
@@ -275,12 +389,12 @@ button:active a{color:white;}
   display: flex;
   flex-flow: column;
 }
-.course-info {
+.course__info {
   margin: 1rem 0rem 0rem 0rem;
   background-color: #d8d8d8;
   border-radius: 2px;
 }
-.course-info h3 {
+.course__info h3 {
   padding: 1.5rem 0rem 1.5rem 1rem;
   font-size: 1.25rem;
   color: #666;
@@ -298,9 +412,8 @@ footer{
   justify-content: space-between;
 }
 
-.copyright {
-  padding-left: 3rem;
-}
+.nav-footer{padding-right: 3rem;}
+.copyright {padding-left: 3rem;}
 
 @media all and (max-width: 470px) {
   footer{
