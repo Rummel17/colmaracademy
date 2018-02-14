@@ -3,7 +3,6 @@ body, html {
   font-family: 'Open Sans', sans-serif; ;
   color: #777;
 }
-
 #main-container{
   display: flex;
   flex-flow: column;
@@ -36,7 +35,6 @@ h1, h2{
 h2 {
   padding: 1rem 0rem 0rem 0rem;
   display: block;
-  background-color: blue;
   text-align: center;
 }
 h3 {
@@ -376,31 +374,46 @@ display: block;}
 }
 .courses__pic-container{border-radius: 4px 4px 0px 0px;}
 /* two pics in the center*/
-.center {margin-left:2rem; margin-right: 2rem;}
+.courses__container--center {margin-left:2rem; margin-right: 2rem;}
 
 @media all and (max-width: 470px) {
-  .headline {padding-top: 0rem;}
-  .headline2 {padding-bottom: 1rem;}
-.gray {background-color: white}
-.courses {display: none;}
+h2 {padding-top: 0rem;}
+.courses__pic-container,
+.course__info span,
+.course__info p,
+.col__text--hide,
+.col-s--hide, .nav-footer {
+  display: none;}
 
-.courses-mobile {
-  margin: 0rem 1rem;
-  display: flex;
-  flex-flow: column;
-}
-.course__info {
-  margin: 1rem 0rem 0rem 0rem;
-  background-color: #d8d8d8;
-  border-radius: 2px;
-}
 .course__info h3 {
-  padding: 1.5rem 0rem 1.5rem 1rem;
-  font-size: 1.25rem;
-  color: #666;
+  padding:1.5rem 0rem 1.5rem 1rem;/*2rem looks better than wireframe 1rem*/
+  color:#777;
+  font-weight: 500;
+  font-size: 1.325rem;
+  }
+
+.course__info {padding: 0;}
+.courses__container--center {margin: 0;}
+.courses{margin: 1rem 1rem 0rem 1rem; flex-flow: column;}
+.section--mobile{
+  background-color: #fff;
+  border-top: #f0f0f0 solid 1px;
+  border-bottom: #f0f0f0 solid 1px;
 }
-  img, video {border-radius: 0px;}
+.courses__container {
+  width: 100%;
+  flex-grow: 1;
+  background-color: #d8d8d8;;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0rem;
+  border-radius: 0px;
 }
+.section__container{
+  flex-flow: column;
+  margin-top: 1rem;
+}
+}
+
 /* footer section */
 footer{
   font-size: 0.75rem;
@@ -417,11 +430,9 @@ footer{
 
 @media all and (max-width: 470px) {
   footer{
-    padding: 0.5rem 0rem 1rem 0rem;
-    border: none;
-    justify-content: center;
+    padding: 0rem;
     height: auto;
+    border: none;
   }
-  .nav.footer {display: none;}
-  .copyright {padding: 0rem;}
+  .copyright{padding: 1rem 0rem 1rem 1rem;}
 }
