@@ -108,17 +108,16 @@ header {
 .link--padding {padding-bottom: 1rem;}
 
 .link a {
-  font-size: 1.125rem;
-  color:#888;
+  font-size: .935rem;
+  color:#24AAFE;
   text-decoration: none;
-  }
-
+}
 .link a:hover {
-  color: #888;
-  border-bottom: #b22222 solid 2px;
-  transition: color 250ms ease-in-out 0ms;
-  transition: border 250ms linear 100ms;
-  }
+  color:#24AAFE;
+  border-bottom: white solid 2px;
+  transition: none 250ms ease-in-out 0ms;
+  transition: none 250ms linear 100ms;
+}
 .col--border {border:none}
 
 .col-s__container:hover {
@@ -150,9 +149,11 @@ h2 {padding-top: 0rem;}
   }
 .text-box-courses p {
   font-size: 1.25rem;
+  color: #888;
 }
 .text-box-courses span {
   font-size: 1rem;
+  font-weight: normal;
 }
 
 .courses__container--center {margin: 0;}
