@@ -1,0 +1,171 @@
+@media all and (min-width: 601px), and (max-width: 768px) {
+h2 {font-size: 2.25rem}
+
+/* nav section */
+.nav--hide, .logo {display: none;}
+
+.icon__svg--hide {display: none;}
+.icon__svg {padding: 0rem 2rem;}
+
+.icons {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin: 0rem 0rem;
+  }
+
+.icon__svg {
+  max-width: 100%;
+  height: auto;
+}
+.icon__svg:hover{
+  background-color: #d9d9d9;
+  transition: background-color 450ms ease-in-out 50ms;
+}
+
+.logo {
+  display: flex;
+  padding-left: 1.5rem;
+  font-size: 1.25rem;
+}
+
+.logo__picture {
+  width: 2rem;
+  padding-right: .25rem;
+}
+
+/* 1st gray/banner section */
+.section {
+  flex-flow: column;
+  padding: 0;
+}
+.pic-container,
+.video-container,
+.col-s__pic-container,
+.pic-container
+{border-radius: 0px;}
+
+.col, .col-s {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+
+.text-box-banner {margin: 0rem 2rem 2rem 2rem;}
+.text-box-banner h1{font-size: 2.5rem;}
+.text-box-banner h2 {
+  font-size: 1.25rem;
+  padding-bottom: 1.5rem;
+}
+.btn {width: 60%;  }
+
+/*1st white/information section*/
+.pic-container--hide, .pic-desktop
+{display: none;}
+.pic-mobile {display: block;}
+
+.col-s__pic-container{
+  width: 50%;
+}
+
+.text-box-s {
+  width: 50%;
+}
+
+.text-box-s {
+  padding-left: 2rem;
+}
+.text-box-s h3 {
+  letter-spacing: -1px;
+  font-size: 1.5rem;
+}
+.text-box-s p {
+  font-size: 1.125rem;
+  font-weight: 100;
+  color:#888
+}
+
+.text-box-s span{
+  padding-top: 0.5rem;
+}
+
+.link {padding-bottom: 2rem;}
+.link--padding {padding-bottom: 1rem;}
+
+.link a {
+  font-size: .935rem;
+  color:#888;
+  text-decoration: none;
+  }
+.link a:hover {
+  color: #888;
+  border-bottom: #b22222 solid 2px;
+  transition: color 250ms ease-in-out 0ms;
+  transition: border 250ms linear 100ms;
+  }
+.col--border {border:none}
+
+.col-s__container:hover {
+  background-color: #fff;
+  transition: background-color 450ms ease-in-out 0ms;
+}
+/*wireframe says 64px between each pic but looks weired, used half */
+.col-s__pic-container {
+  margin-bottom: 2rem;
+  border-radius: 2px;
+}
+
+.col-s__container {
+  width: 100%;
+  box-sizing: border-box;
+  flex-flow: row;
+  padding: 1rem 2rem;
+}
+
+/*2nd gray/picture gallery section*/
+h2 {padding-top: 0rem;}
+
+.text-box h2 {font-size: 2.25rem}
+.text-box-courses h3 {
+  padding:0rem;/*2rem looks better than wireframe 1rem*/
+  color:#888;
+  font-weight: 600;
+  font-size: 1.25rem;
+  }
+.text-box-courses span {
+  font-size: 0.935rem;
+}
+
+.courses__container--center {margin: 0;}
+
+.section--mobile{
+  padding-bottom: 1.5rem;
+  background-color: #d8d8d8;
+  border-top: #f0f0f0 solid 1px;
+  border-bottom: #f0f0f0 solid 1px;
+}
+
+.courses {
+  justify-content: space-between;
+    margin: 2rem 2rem 0rem 2rem;
+}
+.courses__container {
+  flex:0 1 48%;
+  background-color: #fff;
+  margin-bottom: 1.75rem;
+  padding-bottom: 0rem;
+  border-radius: 2px;
+}
+/* 2nd white/information section & footer*/
+.section--flexrow{ margin-top: 1rem;}
+.col-s--hide, .text-box--hide {display: none;}
+
+  footer{
+  padding: 0rem;
+  margin-top: 1rem;
+  height: auto;
+  border: none;
+  }
+  .copyright{padding: 1rem 0rem 1rem 2rem;}
+}

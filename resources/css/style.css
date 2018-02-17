@@ -1,14 +1,12 @@
 body, html {
   font-size: 16px ;
   font-family: 'Open Sans', sans-serif; ;
-  color: #777;
 }
 #main-container{
   display: flex;
   flex-flow: column;
-  width: 100%;
+  box-sizing: border-box;
 }
-
 /* fonts */
 @font-face {
   font-family: 'Open Sans', sans-serif;
@@ -24,46 +22,37 @@ body, html {
 }
 /* h1/h2: italic/serif looks educated,
 h3 red: eye catcher important events etc.  */
-h1, h2{
-  padding: 0rem 0rem 2rem 0rem;
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: #555;
+h1 {
+  padding: 2rem 0rem 2rem 0rem;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #666;
   font-family: 'Italianno', 'cursive', serif;
   font-style: italic;
 }
+
 h2 {
-  padding: 1rem 0rem 0rem 0rem;
-  display: block;
-  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #888;
+  font-family: 'Lato', sans-serif;
 }
+
 h3 {
-  padding: 0rem 0rem 1.5rem 0rem;
+  padding: 0rem 0rem 0rem 0rem;
   font-size: 1.5rem;
   font-weight:600;
   color: #b22222;
 }
-h4 {
-  padding: 1rem 0rem 1rem 0rem;
-  font-size: 1rem;
-  font-weight: 300;
-  color:#555;
-  line-height: 1.5;
-  font-family:'Lato', sans-serif;
-}
+
 p  {
-  padding: 0rem;
+  padding-top: 1rem;
   font-size: 1.25rem;
   font-weight: 100;
   color: #888; line-height: 1.5;
   font-family:'Lato', sans-serif;
 }
-
-@media all and (max-width: 470px) {
-  h2 {font-size: 2.25rem}
-}
-
-/* header section */
+/* header & nav section */
 header {
   width: 100%;
   display:flex;
@@ -77,7 +66,7 @@ header {
   align-items: center;
 }
 .logo {
-  padding-left: 2.25rem;/* different: to adjust with rest*/
+  padding-left: 1.25rem;/* different: to adjust with rest*/
   font-size: 1.425rem;
 }
 .logo__picture{
@@ -89,75 +78,55 @@ header {
   font-weight: bolder;
 }
 .nav  {
-  margin-right: 2.5rem;
+  margin-right: 1.5rem;
 }
-.nav__link, .nav-footer__link{
+.nav__link{
   text-decoration: none;
   color: #777;
 }
-.nav--padding, .nav-footer--padding{
+.nav--padding{
   padding: 0rem;
   margin: 0rem 0.75rem;
 }
-.nav__link:hover, .nav-footer__link:hover{
+.nav__link:hover{
   color: #454545;
   border-bottom: #b22222 solid 2px;
-  transition: color 250ms ease-in-out 100ms;
-  transition: border 200ms linear 0ms;
+  transition: color 200ms ease-in-out 100ms;
+  transition: border 150ms linear 0ms;
 }
-
 .icons--hide {display:none;}
 
-@media all and (max-width: 470px){
-.nav--hide,.logo {display: none;}
-
-.icons {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin: 0rem 2rem;
-  }
-.icon__svg {
-  max-width: 100%;
-  height: auto;
-  padding: 1rem 1rem
-}
-.icon__svg:hover{
-  background-color: #d9d9d9;
-  transition: background-color 450ms ease-in-out 50ms;
-}
-}
-
-/* main and 1st gray/banner section */
+/* main overall */
 .section {
   width: 100%;
+  box-sizing: border-box;
   height: auto;
   display: flex;
+  padding: 2rem 0rem 2rem 0rem;
 }
 .section--gray {background-color: #d8d8d8;}
 .section--white {background-color: #ffffff;}
 .section--column {
-  padding: 2rem 0rem 2rem 0rem;
+  padding : 0rem 0rem 2rem 0rem;
   display: flex;
   flex-direction: column;
 }
-.section__container{display: flex;}
 
 .col, .col-s {
-  width: 60%;
-  margin: 3rem 0rem 3rem 3rem;
+  width: 57%; /*changed the design a little on purpose: original 60%*/
+  margin-left: 1.5rem;
   height: auto;
   display: flex;
   flex-flow: column;
 }
-.col-s {
-  width: 40%;
-  padding-right: 3rem;
+.col {
+  margin-right: 0.5rem;
 }
+.col-s {width: 43%;}/*changed the design a little on purpose: original 40%*/
 
 /*all assets on site */
-.col__pic-container,
-.col__video-container,
+.pic-container,
+.video-container,
 .col-s__pic-container,
 .courses__pic-container{
   width: 100%;
@@ -165,95 +134,79 @@ header {
   overflow: hidden;
   border-radius: 4px;
 }
-.col__pic-container img,
-.col__video source,
-.col-s__pic-desktop,
-.col-s__pic-mobile,
-.courses__pic-container img {
+.pic-container img,
+.video-container source,
+.courses__pic-container img,
+.pic-desktop,
+.pic-mobile{
 max-width:100%;
 height: auto;
 display: block;}
 
-.col--center-content {justify-content: center;}
-.col-s__banner {margin: 0rem 0rem 2rem 0rem;}
+/*1st gray/banner section */
+.col-s--center {justify-content: center;}
 
-.col-s__banner h1{
-  font-size: 3rem;
-  font-weight: 700;
-  color:#555;
+.text-box-banner {margin: 0rem 1.5rem 2rem 1.5rem;}
+.text-box-banner h2 {
+  padding-bottom: 2rem;
+  line-height: 1.4;
 }
-.col-s__banner h3 {
-  font-size: 1.425rem;
-  font-weight: 400;
-  color:#888;
-  line-height: 1.3;
-}
-.col-s__banner button{
+
+.btn{
   background-color: #4a4a4a; /* #9b9b9b wireframe*/
   font-size: 1.25rem;
   width: 60%;
   padding: 1rem 0rem;
-  display: inline;
+  display: block;
   text-align: center;
-  font-weight: 300;
+  font-weight: 400;
   border-radius: 0.25rem;
   cursor: pointer;
-  border: black solid 1px;
+  border: #0A0A0A solid 1px;
+  color: #f0f0f0;
+
 }
-.col-s-btn__link {
-  text-decoration: none;
-  color: white;
-  padding: 0rem 1rem;
+.btn {text-decoration: none;}
+.btn_text {padding: 0rem 1rem;}
+
+.btn_text:hover {
+  color:#b2b2b2;
   transition: all 250ms linear 0ms;
 }
-.col-s-btn__link:hover {
-  text-decoration: none;
-  color:#b2b2b2;
-}
-.col-s-btn__link:active {
+.btn_text:active {
   text-decoration: none;
 }
-
-@media all and (max-width: 470px){
-  .col__pic-container,
-  .col__video-container,
-  .col-s__pic-container,
-  .courses__pic-container{border-radius: 0px;}
-  .section {flex-flow: column;}
-
-  .col, .col-s {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    justify-content: center;
-  }
-.col-s__banner {margin: 2rem 1rem;}
-.col-s__banner button{width: 100%;}
-
-.col-s__banner h1{font-size: 2.5rem;}
-.col-s__banner h3 {font-size: 1.25rem;}
-}
+.btn_text:active {
+  text-decoration: none;
 }
 
 /*1st white/information section  */
-.col__text {padding-top:2rem;}
+.text-box h2 {
+  padding-top: 2rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #666;
+  font-family: 'Italianno', 'cursive', serif;
+  font-style: italic;
+}
 
-.col__name {
+.text-box__name-font {
   padding: 1rem 0rem;
   font-size: .875rem;
   font-weight: 100;
   display: block;
   font-family: 'Italianno', cursive;
-  color:#999
+  color:#999;
 }
 
 .col--border {border-left: #f0f0f0 solid 1px;}
 
 .col-s__container {
-  width: calc(100%-2rem);
+  width:100%;
   height: auto;
   display: flex;
-  padding: 2rem 0rem 2rem 2rem;
+  padding: 1.5rem 0rem 1.5rem 1.5rem;
+  box-sizing: border-box;
 }
 
 .col-s__container:hover {
@@ -265,85 +218,51 @@ display: block;}
   height: auto;
   overflow: hidden;
 }
-.col-s__pic-mobile {display: none;}
+.pic-mobile {display: none;}
 
-.col-s__text {
+.text-box-s {
   width: 65%;
   height: auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding-left: 1rem;
+  padding: 0rem 1.5rem;
+  box-sizing: border-box;
 }
 
-.col-s__text h3 {padding: 0;}
-.col-s__text a {
-  font-size: 0.875rem;
-  color:#24AAFE;
+.text-box-s p {font-size: 1.125rem;}
+.link {padding-top: 1rem;}
+
+.link a {
+  font-size: 1rem;
+  color:#777;
   text-decoration: none;
-  }
-
-  .col-s__text a:hover {
-    color: #888;
-    border-bottom: #b22222 solid 2px;
-    transition: color 250ms ease-in-out 0ms;
-    transition: border 150ms linear 0ms;
-  }
-
-@media all and (max-width: 470px) {
-.col__pic-container--hide, .col-s__pic-desktop{display: none;}
-.col-s__pic-container, .col-s__text {width: 100%;}
-.col-s__pic-mobile {display: block;}
-.col--border {border:none}
-
-.col-s__container:hover {
-  background-color: #fff;
-  transition: background-color 450ms ease-in-out 0ms;
-}
-/*wireframe says 64px between each pic but looks weired, used half */
-.col-s__container--margin-bottom {margin-bottom:1rem;}
-.col-s__pic-container {margin-bottom: 2rem;}
-.col-s__container {
-  width: calc(100% -2rem);
-  flex-flow: column;
-  padding: 1rem 1rem;
-}
-.col-s__text {
 }
 
-
-/* display none messed up the pictures */
-  .events:hover{
-      background-color: white;
-  }
-  .events {
-    flex-flow: column;
-    padding:  1rem 1rem 2rem 1rem;
-    background-color: white;
-  }
-
-  .pic {width: 100% }
-  .pic img.desktop {
-    display: none;
-  }
-  .pic img.mobile {
-    display: block;
-  }
+.link a:hover {
+  color: #888;
+  border-bottom: #b22222 solid 2px;
+  transition: color 250ms ease-in-out 0ms;
+  transition: border 150ms linear 0ms;
 }
+
 /* 2nd gray/picture gallery section  */
+.text-box--aligncenter {text-align: center;}
+.section--nopadding {
+  padding-top: 0rem;
+}
 
 .courses{
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  margin: 3rem 4.5rem 0rem 4.5rem;
+  margin: 2rem 4.5rem 0rem 4.5rem;
 }
 .courses-mobile {
   display: none;
 }
 .courses__container {
-  width: 30%;
-  flex-grow: 1;
+  flex: 1 1 30%;
   background-color: #fff;
   margin-bottom: 2rem;
   padding-bottom: 1rem;
@@ -354,69 +273,43 @@ display: block;}
   height: auto;
   overflow: hidden;
 }
-.course__info {
-  padding: 1rem 0rem 0.5rem 1.5rem;
-}
-.course__info h3 {padding: 0;}
-.course__info span {
-  padding: 1.125rem 0rem 0.5rem 0rem;
-  font-size: 1.325rem;
-  font-family: 'Lato', sans-serif;
-  display: block;
-  color:#777
-}
-.course__info p {
-  font-size: .875rem;
-  font-weight: 200;
-  color: #999;
-  line-height: 1.45;
-  letter-spacing: 0.25px
-}
+
 .courses__pic-container{border-radius: 4px 4px 0px 0px;}
 /* two pics in the center*/
-.courses__container--center {margin-left:2rem; margin-right: 2rem;}
-
-@media all and (max-width: 470px) {
-h2 {padding-top: 0rem;}
-.courses__pic-container,
-.course__info span,
-.course__info p,
-.col__text--hide,
-.col-s--hide, .nav-footer {
-  display: none;}
-
-.course__info h3 {
-  padding:1.5rem 0rem 1.5rem 1rem;/*2rem looks better than wireframe 1rem*/
-  color:#777;
-  font-weight: 500;
-  font-size: 1.325rem;
-  }
-
-.course__info {padding: 0;}
-.courses__container--center {margin: 0;}
-.courses{margin: 1rem 1rem 0rem 1rem; flex-flow: column;}
-.section--mobile{
-  background-color: #fff;
-  border-top: #f0f0f0 solid 1px;
-  border-bottom: #f0f0f0 solid 1px;
+.courses__container--center {
+  margin-left:2rem;
+  margin-right: 2rem;
 }
-.courses__container {
-  width: 100%;
-  flex-grow: 1;
-  background-color: #d8d8d8;;
-  margin-bottom: 0.5rem;
-  padding-bottom: 0rem;
-  border-radius: 0px;
+
+.text-box-courses {
+  margin: 0;
+  padding: 1.5rem 0rem 1rem 1rem;
 }
-.section__container{
-  flex-flow: column;
-  margin-top: 1rem;
+
+.text-box-courses p {
+  font-size: 1.25rem
+  color: #444;
 }
+.text-box-courses span{
+  display: block;
+  padding-top: 0.25rem;
+  font-size: 1rem;
+  font-weight: 300;
+  color:#999;
+  line-height: 1.2;
+  letter-spacing: .25px;
+}
+
+/* 2nd white/information section*/
+.section--flexrow{
+  display: flex;
+  margin-top: 2rem;
 }
 
 /* footer section */
 footer{
   font-size: 0.75rem;
+  color: #999;
   width:100%;
   height: 4rem;
   border-top:#f0f0f0 solid 1px;
@@ -424,15 +317,5 @@ footer{
   display: flex;
   justify-content: space-between;
 }
-
-.nav-footer{padding-right: 3rem;}
-.copyright {padding-left: 3rem;}
-
-@media all and (max-width: 470px) {
-  footer{
-    padding: 0rem;
-    height: auto;
-    border: none;
-  }
-  .copyright{padding: 1rem 0rem 1rem 1rem;}
-}
+.nav--alignitems{align-items: flex-start;}
+.copyright {padding-left: 1.5rem;}
