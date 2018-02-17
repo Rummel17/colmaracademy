@@ -149,7 +149,8 @@ h2 {padding-top: 0rem;}
   }
 .text-box-courses p {
   font-size: 1.25rem;
-  color: #888;
+  color: #777;
+  font-weight:500;
 }
 .text-box-courses span {
   font-size: 1rem;
