@@ -64,8 +64,8 @@ h2 {font-size: 2.25rem}
 }
 .text-box-s p {
   font-size: 1.125rem;
-  font-weight: 100;
-  color:#888
+  font-weight: normal;
+  color:#999;
 }
 
 .text-box-s span{
@@ -116,10 +116,10 @@ h2 {padding-top: 0rem;}
 
 .text-box h2 {font-size: 2.25rem}
 .text-box-courses h3 {
-  padding:1.25rem 0rem 1.25rem 1rem;/*2rem looks better than wireframe 1rem*/
+  margin:1rem 0rem 1.5rem 1rem;/*2rem looks better than wireframe 1rem*/
   color:#888;
   font-weight: 600;
-  font-size: 1.25rem;
+  font-size: 1.25rem;;
   }
 
 .text-box-courses {padding: 0;}
@@ -144,7 +144,7 @@ h2 {padding-top: 0rem;}
 
   footer{
   padding: 0rem;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   height: auto;
   border: none;
   }

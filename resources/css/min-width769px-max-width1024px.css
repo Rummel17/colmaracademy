@@ -95,7 +95,7 @@ header {
   font-size: 2rem;
 }
 .text-box-s p {
-  font-size: 1.325rem;
+  font-size: 1.25rem;
   font-weight: 100;
   color:#888
 }
@@ -127,8 +127,8 @@ header {
 }
 /*wireframe says 64px between each pic but looks weired, used half */
 .col-s__pic-container {
-  margin-bottom: 2rem;
   border-radius: 2px;
+  margin-bottom: 1rem;
 }
 
 .col-s__container {
@@ -152,16 +152,14 @@ h2 {padding-top: 0rem;}
   font-size: 1.25rem;
 }
 .text-box-courses span {
-  font-size: .935rem;
+  font-size: 1rem;
 }
 
 .courses__container--center {margin: 0;}
 
 .section--mobile{
-  padding-bottom: 1.5rem;
   background-color: #d8d8d8;
-  border-top: #f0f0f0 solid 1px;
-  border-bottom: #f0f0f0 solid 1px;
+  border: none;
 }
 
 .courses {
@@ -171,7 +169,7 @@ h2 {padding-top: 0rem;}
 .courses__container {
   flex:0 1 48%;
   background-color: #fff;
-  margin-bottom: 1.75rem;
+  margin-bottom: 2rem;
   padding-bottom: 0rem;
   border-radius: 2px;
 }
