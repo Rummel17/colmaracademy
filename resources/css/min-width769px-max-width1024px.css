@@ -96,8 +96,8 @@ header {
 }
 .text-box-s p {
   font-size: 1.25rem;
-  font-weight: 100;
-  color:#888
+  font-weight: normal;
+  color:#999;
 }
 
 .text-box-s span{
