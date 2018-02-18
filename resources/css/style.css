@@ -1,25 +1,80 @@
 body, html {
+  box-sizing: border-box;
   font-size: 16px ;
-  font-family: 'Open Sans', sans-serif; ;
+  font-family:'Roboto', sans-serif;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 #main-container{
   display: flex;
   flex-flow: column;
-  box-sizing: border-box;
 }
 /* fonts */
 @font-face {
   font-family: 'Open Sans', sans-serif;
-  src: url(fonts/OpenSans-Regular.tff) format('truetype');
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url(font/OpenSans-Light.ttf) format('truetype');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(font/OpenSans-Regular.ttf) format('truetype');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 @font-face {
-  font-family: 'Lato', sans-serif;
-  src: url(fonts/Lato-Regular.tff) format('truetype');
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(font/OpenSans-SemiBold.ttf) format('truetype');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 @font-face {
-  font-family:'Italianno', 'cursive', serif;
-  src: url(Italianno-Regular.tff) format('truetype');
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Light'), local('Roboto-Light'), url(font/Roboto-Light.ttf) format('truetype');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
+
+@font-face {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(font/Roboto-Regular.ttf) format('truetype')
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  src: local('Roboto Medium'), local('Roboto-Medium'), url(font/Roboto-Medium.ttf) format('truetype')
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(font/Roboto-Bold.ttf) format('truetype')
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Italianno', serif;
+  font-style: normal;
+  font-weight: 400;
+  src: local('Italianno'), local('Italianno-Regular'), url(font/Italianno-Regular.ttf) format('truetype');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
 /* h1/h2: italic/serif looks educated,
 h3 red: eye catcher important events etc.  */
 h1 {
@@ -43,22 +98,23 @@ h3 {
   font-size: 1.5rem;
   font-weight:600;
   color: #b22222;
+  font-family: 'Lato', sans-serif;
 }
 
 p  {
   padding-top: 1rem;
   font-size: 1.25rem;
-  font-weight: 100;
-  color: #888; line-height: 1.5;
-  font-family:'Lato', sans-serif;
+  font-weight: 300;
+  color: #888;
+  line-height: 1.5;
 }
+
 /* header & nav section */
 header {
   width: 100%;
   display:flex;
   justify-content: space-between;
   height: 4rem;
-  color:#999;
 }
 
 .logo, .nav {
@@ -68,10 +124,14 @@ header {
 .logo {
   padding-left: 1.25rem;/* different: to adjust with rest*/
   font-size: 1.425rem;
+  display: flex;
 }
-.logo__picture{
-  padding: 1.25rem 0.5rem 1rem 0rem;
-  width: 2.5rem
+.logo__icon{
+  padding: 1rem 0.5rem 1rem 0rem;
+  width: 3rem;
+}
+.logo__text {
+  color: #888;
 }
 .logo--red {
   color: #b22222;
@@ -83,13 +143,15 @@ header {
 .nav__link{
   text-decoration: none;
   color: #777;
+  font-size: 1.125rem;
 }
 .nav--padding{
   padding: 0rem;
   margin: 0rem 0.75rem;
 }
+.nav__link {color: #888;}
 .nav__link:hover{
-  color: #454545;
+  color: #666;
   border-bottom: #b22222 solid 2px;
   transition: color 200ms ease-in-out 100ms;
   transition: border 150ms linear 0ms;
@@ -99,7 +161,6 @@ header {
 /* main overall */
 .section {
   width: 100%;
-  box-sizing: border-box;
   height: auto;
   display: flex;
   padding: 2rem 0rem 2rem 0rem;
@@ -193,10 +254,9 @@ display: block;}
 .text-box__name-font {
   padding: 1rem 0rem;
   font-size: .935rem;
-  font-weight: bold;
+  font-weight: 500;
   display: block;
-  font-family: 'Italianno', cursive;
-  color:#999;
+  color:#777;
 }
 
 .col--border {border-left: #f0f0f0 solid 1px;}
@@ -206,7 +266,6 @@ display: block;}
   height: auto;
   display: flex;
   padding: 1.5rem 0rem 1.5rem 1.5rem;
-  box-sizing: border-box;
 }
 
 .col-s__container:hover {
@@ -227,15 +286,17 @@ display: block;}
   flex-direction: column;
   justify-content: flex-start;
   padding: 0rem 1.5rem;
-  box-sizing: border-box;
 }
 
-.text-box-s p {font-size: 1.125rem;}
+.text-box-s p {
+  font-size: 1.125rem;
+  letter-spacing: -.25px;
+}
 .link {padding-top: 1rem;}
 
 .link a {
   font-size: 1rem;
-  color:#777;
+  color:#666;
   text-decoration: none;
 }
 
@@ -286,17 +347,23 @@ display: block;}
   padding: 1.5rem 0rem 1rem 1rem;
 }
 
+.text-box-courses h3 {
+}
+
 .text-box-courses p {
-  font-size: 1.25rem
-  color: #444;
+  padding: 0.85rem 0rem 0.5rem 0rem;
+  font-size: 1.0625rem;
+  font-weight: 400;
+  color: #999;
+  letter-spacing: .25px;
 }
 .text-box-courses span{
   display: block;
-  padding-top: 0.25rem;
-  font-size: 1rem;
+  padding-top: ;
+  font-size: 0.85rem;
   font-weight: 300;
   color:#999;
-  line-height: 1.2;
+  line-height: 1.5;
   letter-spacing: .25px;
 }
 
@@ -317,5 +384,6 @@ footer{
   display: flex;
   justify-content: space-between;
 }
+.nav--s-font {font-size: 0.75rem;}
 .nav--alignitems{align-items: flex-start;}
 .copyright {padding-left: 1.5rem;}

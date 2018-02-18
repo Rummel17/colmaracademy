@@ -1,6 +1,11 @@
 @media all and (min-width: 769px), and (max-width: 1024px) {
 h2 {font-size: 2.25rem}
 
+h3 {
+  color: #888;
+  font-family: 'Open Sans', sans-serif;
+}
+
 /* nav section */
 header {
   width: 100%;
@@ -91,26 +96,30 @@ header {
   padding-left: 2rem;
 }
 .text-box-s h3 {
-  letter-spacing: -1px;
+  letter-spacing:-1px;;
   font-size: 2rem;
+  font-weight: 400;
+  color: #666;
 }
 .text-box-s p {
+  padding-top: 1.25rem;
   font-size: 1.25rem;
-  font-weight: normal;
+  font-weight: 300;
   color:#999;
 }
 
 .text-box-s span{
-  padding-top: 0.5rem;
+  padding-top: 1rem;
 }
 
 .link {padding-bottom: 2rem;}
 .link--padding {padding-bottom: 1rem;}
 
 .link a {
-  font-size: .935rem;
+  font-size: 1rem;
   color:#24AAFE;
   text-decoration: none;
+  padding: 1rem 1rem 1rem 0rem;
 }
 .link a:hover {
   color:#24AAFE;
@@ -127,34 +136,41 @@ header {
 /*wireframe says 64px between each pic but looks weired, used half */
 .col-s__pic-container {
   border-radius: 2px;
-  margin-bottom: 1rem;
+}
+.col-s__container--margin {
+  margin-bottom: 2rem;
 }
 
 .col-s__container {
   width: 100%;
-  box-sizing: border-box;
   flex-flow: row;
-  padding: 1rem 2rem;
+  padding: 2rem 2rem 0rem 2rem;
 }
 
 /*2nd gray/picture gallery section*/
 h2 {padding-top: 0rem;}
 
 .text-box h2 {font-size: 2.5rem}
+.text-box-courses {
+  padding-bottom: 2rem;
+}
 .text-box-courses h3 {
   padding:0rem;/*2rem looks better than wireframe 1rem*/
-  color:#888;
-  font-weight: 600;
+  color:#666;
+  font-weight: 400;
   font-size: 1.5rem;
+  letter-spacing: -1px;
   }
 .text-box-courses p {
-  font-size: 1.25rem;
-  color: #777;
-  font-weight:500;
+  font-size: 1.125rem;
+  padding-top: 1.25rem;
+  color: #888;
 }
 .text-box-courses span {
-  font-size: 1rem;
+  font-size: 0.85rem;
   font-weight: normal;
+  letter-spacing: 0.5px;
+
 }
 
 .courses__container--center {margin: 0;}

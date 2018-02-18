@@ -1,18 +1,23 @@
 @media all and (max-width: 470px) {
 h2 {font-size: 2.25rem}
-/* header & nav section */
-.nav--hide,.logo {display: none;}
+h3 {
+  color: #888;
+  font-family: 'Open Sans', sans-serif;
+}
+/* nav section */
+.nav--hide, .logo {display: none;}
+.icon__svg {padding: 0rem 2rem;}
 
 .icons {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin: 0rem 2rem;
+  margin: 0rem 0rem;
   }
+
 .icon__svg {
-  width:1.75rem;
+  max-width: 100%;
   height: auto;
-  padding: 0rem 1rem;
 }
 .icon__svg:hover{
   background-color: #d9d9d9;
@@ -58,25 +63,26 @@ h2 {font-size: 2.25rem}
   padding-left: 1rem;
 }
 .text-box-s h3 {
-  color: #888;
+  color: #666;
   letter-spacing: -1px;
-  font-size: 1.5rem;
+  font-weight: 400;
+  font-size: 1.625rem;
 }
 .text-box-s p {
-  font-size: 1.125rem;
-  font-weight: normal;
+  font-size: 1.25rem;
+  font-weight: 300;
   color:#999;
 }
 
 .text-box-s span{
-  padding-top: 0.5rem;
+  padding-top: 0.75rem;
 }
 
 .link {padding-bottom: 0rem;}
 .link--padding {padding-bottom: 0rem;}
 
 .link a {
-    font-size: .935rem;
+    font-size: 1rem;
     color:#24AAFE;
     text-decoration: none;
   }
@@ -102,7 +108,6 @@ h2 {font-size: 2.25rem}
 
 .col-s__container {
   width: 100%;
-  box-sizing: border-box;
   flex-flow: column;
   padding: 1rem;
 }
@@ -119,7 +124,7 @@ h2 {padding-top: 0rem;}
   margin:1rem 0rem 1.5rem 1rem;/*2rem looks better than wireframe 1rem*/
   color:#888;
   font-weight: 600;
-  font-size: 1.25rem;;
+  font-size: 1.325rem;;
   }
 
 .text-box-courses {padding: 0;}

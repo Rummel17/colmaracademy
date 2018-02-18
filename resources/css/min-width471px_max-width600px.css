@@ -1,20 +1,22 @@
 @media all and (min-width: 471px), and (max-width: 600px) {
 h2 {font-size: 2.25rem}
+h3 {
+  color: #888;
+  font-family: 'Open Sans', sans-serif;
+}
+
 /* nav section */
 .nav--hide, .logo {display: none;}
-
-.icon__svg--hide {display: none;}
-.icon__svg {padding: 0rem 1.25rem;}
+.icon__svg {padding: 0rem 2rem;}
 
 .icons {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   width: 100%;
-  margin: 0rem 2rem;
+  margin: 0rem 0rem;
   }
 
 .icon__svg {
-  width: 1.75rem;
   max-width: 100%;
   height: auto;
 }
@@ -23,19 +25,6 @@ h2 {font-size: 2.25rem}
   transition: background-color 450ms ease-in-out 50ms;
 }
 
-/* in addtion to max-470px */
-/* Start */
-.logo {
-  display: flex;
-  padding-left: 1rem;
-  font-size: 1.125rem;
-}
-
-.logo__picture {
-  width: 2rem;
-  padding-right: .25rem;
-}
-/* End */
 
 /* 1st gray/banner section */
 .section {
@@ -76,22 +65,24 @@ h2 {font-size: 2.25rem}
   padding-left: 1rem;
 }
 .text-box-s h3 {
-  color: #666;
   letter-spacing: -1px;
-  font-size: 1.75rem;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #666;
 }
 .text-box-s p {
-  font-size: 1.25rem;
-  font-weight: normal;
+  padding-top: 1.25rem;
+  font-size: 1.325rem;
+  font-weight: 300;
   color:#999;
 }
 
 .text-box-s span{
-  padding-top: 0.5rem;
+  padding-top: 0.75rem;
 }
 
 .link {padding-bottom: 0rem;}
-.link--padding {padding-bottom: 0rem;}
+.link--padding {padding-bottom: 1rem;}
 
 .link a {
     font-size: 1.125rem;
@@ -120,7 +111,6 @@ h2 {font-size: 2.25rem}
 
 .col-s__container {
   width: 100%;
-  box-sizing: border-box;
   flex-flow: column;
   padding: 1rem;
 }
