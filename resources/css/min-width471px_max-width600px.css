@@ -1,3 +1,4 @@
+/* Portrait phablets max600 */
 @media all and (min-width: 471px), and (max-width: 600px) {
 h2 {font-size: 2.25rem}
 h3 {

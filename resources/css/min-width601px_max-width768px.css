@@ -1,3 +1,4 @@
+/* Landscape phones and portrait tablets max768 */
 @media all and (min-width: 601px), and (max-width: 768px) {
 h2 {font-size: 2.25rem}
 
@@ -133,6 +134,9 @@ h3 {
 /*2nd gray/picture gallery section*/
 h2 {padding-top: 0rem;}
 
+.text-box-courses {
+  padding-bottom: 2rem;
+}
 .text-box h2 {font-size: 2.25rem}
 .text-box-courses h3 {
   padding:0rem;/*2rem looks better than wireframe 1rem*/
