@@ -195,7 +195,8 @@ header {
 
 .pic-container,
 .col-s__pic-container,
-.courses__pic-container{
+.courses__pic-container,
+.video-container{
   width: 100%;
   height: auto;
   overflow: hidden;
@@ -205,7 +206,7 @@ header {
 .pic-container img,
 .courses__pic-container img,
 .pic-desktop,
-.video-container,
+.video-container source,
 .pic-mobile{
 max-width:100%;
 height: auto;
@@ -383,11 +384,6 @@ display: block;}
   margin-top: 2rem;
 }
 
-.col__container {
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-}
 
 .video-container {border-radius: 4px;}
 
