@@ -196,7 +196,7 @@ header {
 .pic-container,
 .col-s__pic-container,
 .courses__pic-container{
-  width: 100%;
+  max-width: 100%;
   height: auto;
   overflow: hidden;
   border-radius: 4px;
@@ -207,7 +207,7 @@ header {
 .pic-desktop,
 .video-container,
 .pic-mobile{
-max-width:100%;
+width:100%;
 height: auto;
 display: block;}
 
